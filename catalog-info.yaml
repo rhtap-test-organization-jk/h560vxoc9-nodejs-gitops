@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: h560vxoc9-nodejs-gitops
+  description: This is GitOps manifest for h560vxoc9-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: h560vxoc9-nodejs
+    backstage.io/kubernetes-id: h560vxoc9-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+    github.com/project-slug: rhtap-test-organization-jk/h560vxoc9-nodejs-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:h560vxoc9-nodejs
